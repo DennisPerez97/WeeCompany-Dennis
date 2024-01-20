@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href=".\assets\favicon.ico">
+  <title>WeeRegisterWeb</title>
+  <link rel="stylesheet" href="http://reset5.googlecode.com/hg/reset.min.css">
+  <link rel="stylesheet" href=".\style\style.css">
+  <link rel="stylesheet" href=".\style\formulario.css">
+</header>
+<body>
+  <dialog class="modal" id="dialog">
+  </dialog>
+
+  <div class="container">
+    <div class="left_container">
+      <div class="container_img">
+        <div>
+          <img src="./assets/weeclaims.png" >
+        </div>
+      </div>   
+    </div>
+
+    <section class="rigth_container">
+      <fieldset id="formulario" class="form_container">
+        <legend class="tittle">Registro para participantes</legend>
+        <form id="form_target" onsubmit="submitForm();">
+          <div class="form__group">
+            <input type="text" id="company" class="form__input" onkeyup="validate();" placeholder="Nombre de la compañia" required="" />
+            <label for="name" class="form__label">Nombre de la compañia</label>
+          </div>
+          <div class="form__group">
+            <input type="text" id="cedula" class="form__input" pattern="\d{1,8}" maxlength="8" onkeyup="validate();" placeholder="Cedula" required="" />
+            <label for="name" class="form__label">Cedula</label>
+          </div>
+          <div class="form__group">
+            <input type="text" readonly id="contact_id" class="form__input" onkeyup="validate();" placeholder="Nombre de la persona para contacto" required="" />
+            <label for="contactLabel" class="form__label">Nombre de la persona para contacto</label>
+          </div>
+          <div class="form__group">
+            <input type="text" readonly id="tittle_id" class="form__input" onkeyup="validate();" placeholder="Título" required="" />
+            <label for="tittleLabel" class="form__label">Título</label>
+          </div>
+          <div class="form__group">
+            <input type="text" id="email_id" class="form__input" pattern="^[^@\s]+@[^@\s]+\.(com|net|org|gov)$" onkeyup="validate();" placeholder="Correo electrónico" required="" />
+            <label for="emailLabel" class="form__label">Correo electrónico</label>
+          </div>
+          <div class="form__group">
+            <input type="text" id="phone_id" class="form__input" pattern="\d{10,10}" minlength="10" maxlength="10" onkeyup="validate();" placeholder="Teléfono" required="" />
+            <label for="phoneLabel" class="form__label">Teléfono</label>
+          </div>
+          <div class="form__group checkbox_group">
+            <input type="checkbox" class="vetical_center" id="check_id" onchange="validate();" required=""/>
+            <label class="vetical_center" for="checkId">He leído y acepto el <a href="https://weecompany.net/Legales/Aviso">Aviso de privacidad/Términos y condiciones</a></label>
+          </div>
+            <input class = "wee_btn" type="submit" id="submit_id" disabled value="Continuar"/>
+        </form>
+      </fieldset> 
+    </section>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src=".\script\formulario.js"></script>
+
+</body>
+</html>
