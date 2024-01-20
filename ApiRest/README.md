@@ -21,4 +21,5 @@ POST http://localhost:58683/api/user
 
 ![image](https://github.com/DennisPerez97/WeeCompany-Dennis/assets/99489937/713f7704-2f43-4964-b9c6-95034fc4b3c0)
 
-
+### Colección de Postman
+[WeeCompanyTest](https://github.com/DennisPerez97/WeeCompany-Dennis/blob/master/ApiRest/Wee%20Company%20Test.postman_collection.json)
