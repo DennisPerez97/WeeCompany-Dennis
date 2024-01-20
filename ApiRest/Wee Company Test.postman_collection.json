@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "cd00dc7b-e609-4d55-b0e3-9b21a6eaf4bc",
+		"name": "Wee Company Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31315412"
+	},
+	"item": [
+		{
+			"name": "Recuperacion de datos de la cedula",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:58683/api/cedula/13761837",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "58683",
+					"path": [
+						"api",
+						"cedula",
+						"13761837"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar registros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:58683/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "58683",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Company\": \"Unam\",\r\n    \"Cedula\": \"99999996\",\r\n    \"Name\": \"Cedula inexistente\",\r\n    \"Degree\": \"Cedula inexistente\",\r\n    \"Email\": \"denosaurio@hotmail.com\",\r\n    \"Phone\": \"985101769\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:58683/api/user/123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "58683",
+					"path": [
+						"api",
+						"user",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
